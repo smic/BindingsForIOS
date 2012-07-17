@@ -25,14 +25,14 @@ NSString* const SMFormatterBindingOption            = @"SMFormatterBindingOption
 @property (nonatomic, copy) NSString *binding;
 @property (nonatomic, copy) NSString *keyPath;
 @property (nonatomic, copy) NSDictionary *options;
-@property (nonatomic, assign) id controller;
-@property (nonatomic, assign) id object;
-@property (nonatomic, retain) NSValueTransformer *valueTransformer;
-@property (nonatomic, assign) BOOL allowsNullArgument;
-@property (nonatomic, retain) id placeholder;
-@property (nonatomic, assign) BOOL bidirectional;
-@property (nonatomic, assign) BOOL noEqualCheck;
-@property (nonatomic, retain) NSFormatter *formatter;
+@property (nonatomic, weak) id controller;
+@property (nonatomic, weak) id object;
+@property (nonatomic, strong) NSValueTransformer *valueTransformer;
+@property (nonatomic) BOOL allowsNullArgument;
+@property (nonatomic, strong) id placeholder;
+@property (nonatomic) BOOL bidirectional;
+@property (nonatomic) BOOL noEqualCheck;
+@property (nonatomic, strong) NSFormatter *formatter;
 
 - (id)initWithBinding:(NSString *)binding
            controller:(id)controller 
@@ -45,17 +45,17 @@ NSString* const SMFormatterBindingOption            = @"SMFormatterBindingOption
 
 @implementation SMKeyValueBindingInfo
 
-@synthesize binding             = binding_;
-@synthesize keyPath             = keyPath_;
-@synthesize options             = options_;
-@synthesize controller          = controller_;
-@synthesize valueTransformer    = valueTransformer_;
-@synthesize object              = object_;
-@synthesize allowsNullArgument  = allowsNullArgument_;
-@synthesize placeholder         = placeholder_;
-@synthesize bidirectional       = bidirectional_;
-@synthesize noEqualCheck		= noEqualCheck_;
-@synthesize formatter			= formatter_;
+@synthesize binding             = _binding;
+@synthesize keyPath             = _keyPath;
+@synthesize options             = _options;
+@synthesize controller          = _controller;
+@synthesize valueTransformer    = _valueTransformer;
+@synthesize object              = _object;
+@synthesize allowsNullArgument  = _allowsNullArgument;
+@synthesize placeholder         = _placeholder;
+@synthesize bidirectional       = _bidirectional;
+@synthesize noEqualCheck		= _noEqualCheck;
+@synthesize formatter			= _formatter;
 
 static char SMKeyValueBindingContext;
 
@@ -201,8 +201,6 @@ static char SMKeyValueBindingContext;
     self.object = nil;
 	self.placeholder = nil;
 	self.formatter = nil;
-	
-	[super dealloc];
 }
 
 @end
@@ -261,7 +259,6 @@ static char InfosKey;
 																	   withKeyPath:keyPath
 																		   options:options];
 	[self setInfo:info forBinding:binding];
-	[info release];		
 }
 
 - (void)unbind:(NSString *)binding {
