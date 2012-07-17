@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4DB107315B52D98004AAA36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DB107215B52D98004AAA36 /* UIKit.framework */; };
+		D4DB107515B52D98004AAA36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DB107415B52D98004AAA36 /* Foundation.framework */; };
+		D4DB107715B52D98004AAA36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DB107615B52D98004AAA36 /* CoreGraphics.framework */; };
+		D4DB107D15B52D98004AAA36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4DB107B15B52D98004AAA36 /* InfoPlist.strings */; };
+		D4DB107F15B52D98004AAA36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB107E15B52D98004AAA36 /* main.m */; };
+		D4DB108315B52D98004AAA36 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB108215B52D98004AAA36 /* SMAppDelegate.m */; };
+		D4DB108615B52D98004AAA36 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB108515B52D98004AAA36 /* SMViewController.m */; };
+		D4DB108915B52D98004AAA36 /* SMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DB108715B52D98004AAA36 /* SMViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D4DB106E15B52D98004AAA36 /* BindingsForIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BindingsForIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DB107215B52D98004AAA36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4DB107415B52D98004AAA36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4DB107615B52D98004AAA36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4DB107A15B52D98004AAA36 /* BindingsForIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BindingsForIOS-Info.plist"; sourceTree = "<group>"; };
+		D4DB107C15B52D98004AAA36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4DB107E15B52D98004AAA36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4DB108015B52D98004AAA36 /* BindingsForIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BindingsForIOS-Prefix.pch"; sourceTree = "<group>"; };
+		D4DB108115B52D98004AAA36 /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
+		D4DB108215B52D98004AAA36 /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
+		D4DB108415B52D98004AAA36 /* SMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMViewController.h; sourceTree = "<group>"; };
+		D4DB108515B52D98004AAA36 /* SMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
+		D4DB108815B52D98004AAA36 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SMViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4DB106B15B52D98004AAA36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4DB107315B52D98004AAA36 /* UIKit.framework in Frameworks */,
+				D4DB107515B52D98004AAA36 /* Foundation.framework in Frameworks */,
+				D4DB107715B52D98004AAA36 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4DB106315B52D98004AAA36 = {
+			isa = PBXGroup;
+			children = (
+				D4DB108F15B52DC4004AAA36 /* Bindings */,
+				D4DB107815B52D98004AAA36 /* BindingsExample */,
+				D4DB107115B52D98004AAA36 /* Frameworks */,
+				D4DB106F15B52D98004AAA36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4DB106F15B52D98004AAA36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4DB106E15B52D98004AAA36 /* BindingsForIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4DB107115B52D98004AAA36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4DB107215B52D98004AAA36 /* UIKit.framework */,
+				D4DB107415B52D98004AAA36 /* Foundation.framework */,
+				D4DB107615B52D98004AAA36 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4DB107815B52D98004AAA36 /* BindingsExample */ = {
+			isa = PBXGroup;
+			children = (
+				D4DB108115B52D98004AAA36 /* SMAppDelegate.h */,
+				D4DB108215B52D98004AAA36 /* SMAppDelegate.m */,
+				D4DB108415B52D98004AAA36 /* SMViewController.h */,
+				D4DB108515B52D98004AAA36 /* SMViewController.m */,
+				D4DB108715B52D98004AAA36 /* SMViewController.xib */,
+				D4DB107915B52D98004AAA36 /* Supporting Files */,
+			);
+			name = BindingsExample;
+			path = BindingsForIOS;
+			sourceTree = "<group>";
+		};
+		D4DB107915B52D98004AAA36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4DB107A15B52D98004AAA36 /* BindingsForIOS-Info.plist */,
+				D4DB107B15B52D98004AAA36 /* InfoPlist.strings */,
+				D4DB107E15B52D98004AAA36 /* main.m */,
+				D4DB108015B52D98004AAA36 /* BindingsForIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4DB108F15B52DC4004AAA36 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4DB106D15B52D98004AAA36 /* BindingsForIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4DB108C15B52D98004AAA36 /* Build configuration list for PBXNativeTarget "BindingsForIOS" */;
+			buildPhases = (
+				D4DB106A15B52D98004AAA36 /* Sources */,
+				D4DB106B15B52D98004AAA36 /* Frameworks */,
+				D4DB106C15B52D98004AAA36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BindingsForIOS;
+			productName = BindingsForIOS;
+			productReference = D4DB106E15B52D98004AAA36 /* BindingsForIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4DB106515B52D98004AAA36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SM;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Stephan Michels";
+			};
+			buildConfigurationList = D4DB106815B52D98004AAA36 /* Build configuration list for PBXProject "BindingsForIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4DB106315B52D98004AAA36;
+			productRefGroup = D4DB106F15B52D98004AAA36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4DB106D15B52D98004AAA36 /* BindingsForIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4DB106C15B52D98004AAA36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4DB107D15B52D98004AAA36 /* InfoPlist.strings in Resources */,
+				D4DB108915B52D98004AAA36 /* SMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4DB106A15B52D98004AAA36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4DB107F15B52D98004AAA36 /* main.m in Sources */,
+				D4DB108315B52D98004AAA36 /* SMAppDelegate.m in Sources */,
+				D4DB108615B52D98004AAA36 /* SMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4DB107B15B52D98004AAA36 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4DB107C15B52D98004AAA36 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D4DB108715B52D98004AAA36 /* SMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4DB108815B52D98004AAA36 /* en */,
+			);
+			name = SMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4DB108A15B52D98004AAA36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4DB108B15B52D98004AAA36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4DB108D15B52D98004AAA36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BindingsForIOS/BindingsForIOS-Prefix.pch";
+				INFOPLIST_FILE = "BindingsForIOS/BindingsForIOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4DB108E15B52D98004AAA36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BindingsForIOS/BindingsForIOS-Prefix.pch";
+				INFOPLIST_FILE = "BindingsForIOS/BindingsForIOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4DB106815B52D98004AAA36 /* Build configuration list for PBXProject "BindingsForIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4DB108A15B52D98004AAA36 /* Debug */,
+				D4DB108B15B52D98004AAA36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4DB108C15B52D98004AAA36 /* Build configuration list for PBXNativeTarget "BindingsForIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4DB108D15B52D98004AAA36 /* Debug */,
+				D4DB108E15B52D98004AAA36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4DB106515B52D98004AAA36 /* Project object */;
+}
