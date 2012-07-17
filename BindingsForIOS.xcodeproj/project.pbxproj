@@ -15,6 +15,9 @@
 		D4DB108315B52D98004AAA36 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB108215B52D98004AAA36 /* SMAppDelegate.m */; };
 		D4DB108615B52D98004AAA36 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB108515B52D98004AAA36 /* SMViewController.m */; };
 		D4DB108915B52D98004AAA36 /* SMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DB108715B52D98004AAA36 /* SMViewController.xib */; };
+		D4DB109F15B530CD004AAA36 /* NSObject+SMKeyValueBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB109A15B530CD004AAA36 /* NSObject+SMKeyValueBinding.m */; };
+		D4DB10A015B530CD004AAA36 /* NSObject+SMAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB109C15B530CD004AAA36 /* NSObject+SMAssociatedObjects.m */; };
+		D4DB10A115B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DB109E15B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,12 @@
 		D4DB108415B52D98004AAA36 /* SMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMViewController.h; sourceTree = "<group>"; };
 		D4DB108515B52D98004AAA36 /* SMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
 		D4DB108815B52D98004AAA36 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SMViewController.xib; sourceTree = "<group>"; };
+		D4DB109915B530CD004AAA36 /* NSObject+SMKeyValueBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SMKeyValueBinding.h"; sourceTree = "<group>"; };
+		D4DB109A15B530CD004AAA36 /* NSObject+SMKeyValueBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SMKeyValueBinding.m"; sourceTree = "<group>"; };
+		D4DB109B15B530CD004AAA36 /* NSObject+SMAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SMAssociatedObjects.h"; sourceTree = "<group>"; };
+		D4DB109C15B530CD004AAA36 /* NSObject+SMAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SMAssociatedObjects.m"; sourceTree = "<group>"; };
+		D4DB109D15B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SMKeyValueObserving.h"; sourceTree = "<group>"; };
+		D4DB109E15B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SMKeyValueObserving.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +112,12 @@
 		D4DB108F15B52DC4004AAA36 /* Bindings */ = {
 			isa = PBXGroup;
 			children = (
+				D4DB109915B530CD004AAA36 /* NSObject+SMKeyValueBinding.h */,
+				D4DB109A15B530CD004AAA36 /* NSObject+SMKeyValueBinding.m */,
+				D4DB109B15B530CD004AAA36 /* NSObject+SMAssociatedObjects.h */,
+				D4DB109C15B530CD004AAA36 /* NSObject+SMAssociatedObjects.m */,
+				D4DB109D15B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.h */,
+				D4DB109E15B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.m */,
 			);
 			path = Bindings;
 			sourceTree = "<group>";
@@ -174,6 +189,9 @@
 				D4DB107F15B52D98004AAA36 /* main.m in Sources */,
 				D4DB108315B52D98004AAA36 /* SMAppDelegate.m in Sources */,
 				D4DB108615B52D98004AAA36 /* SMViewController.m in Sources */,
+				D4DB109F15B530CD004AAA36 /* NSObject+SMKeyValueBinding.m in Sources */,
+				D4DB10A015B530CD004AAA36 /* NSObject+SMAssociatedObjects.m in Sources */,
+				D4DB10A115B530CD004AAA36 /* NSDictionary+SMKeyValueObserving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
