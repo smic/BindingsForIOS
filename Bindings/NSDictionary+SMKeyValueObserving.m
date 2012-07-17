@@ -1,5 +1,5 @@
 //
-//  NSDictionary+SMAdditions.m
+//  NSDictionary+SMKeyValueObserving.m
 //  Bindings
 //
 //  Created by Stephan Michels on 16.01.12.
@@ -9,7 +9,7 @@
 #import "NSDictionary+SMKeyValueObserving.h"
 
 
-@implementation NSDictionary (SMAdditions)
+@implementation NSDictionary (SMKeyValueObserving)
 
 - (NSUInteger)keyValueChangeKind  {
 	return [[self objectForKey:NSKeyValueChangeKindKey] unsignedIntegerValue];

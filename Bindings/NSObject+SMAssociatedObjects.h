@@ -19,5 +19,4 @@
 - (void)setAssociateValue:(id)value withKey:(void *)key;
 - (id)associatedValueForKey:(void *)key;
 
-
 @end
