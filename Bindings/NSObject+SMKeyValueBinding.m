@@ -18,6 +18,7 @@ NSString* const SMNullPlaceholderBindingOption      = @"SMNullPlaceholderBinding
 NSString* const SMBidirectionalBindingOption        = @"SMBidirectionalBindingOption";
 NSString* const SMNoEqualCheckBindingOption         = @"SMNoEqualCheckBindingOption";
 NSString* const SMFormatterBindingOption            = @"SMFormatterBindingOption";
+NSString* const SMDebugBindingOption                = @"SMDebugBindingOption";
 
 
 @interface SMKeyValueBindingInfo : NSObject {}
@@ -33,6 +34,7 @@ NSString* const SMFormatterBindingOption            = @"SMFormatterBindingOption
 @property (nonatomic) BOOL bidirectional;
 @property (nonatomic) BOOL noEqualCheck;
 @property (nonatomic, strong) NSFormatter *formatter;
+@property (nonatomic) BOOL debug;
 
 - (id)initWithBinding:(NSString *)binding
            controller:(id)controller 
@@ -56,6 +58,7 @@ NSString* const SMFormatterBindingOption            = @"SMFormatterBindingOption
 @synthesize bidirectional       = _bidirectional;
 @synthesize noEqualCheck		= _noEqualCheck;
 @synthesize formatter			= _formatter;
+@synthesize debug               = _debug;
 
 static char SMKeyValueBindingContext;
 
@@ -103,6 +106,10 @@ static char SMKeyValueBindingContext;
 			NSParameterAssert([[options objectForKey:SMFormatterBindingOption] isKindOfClass:[NSFormatter class]]);
 			NSAssert(!self.bidirectional, @"No bidirectional binding with formatter supported");
             self.formatter = [options objectForKey:SMFormatterBindingOption];
+        }
+        
+        if ([options objectForKey:SMDebugBindingOption]) {
+            self.debug = [[options objectForKey:SMDebugBindingOption] boolValue];
         }
         
 		// add observers
@@ -156,6 +163,10 @@ static char SMKeyValueBindingContext;
 	if (value == nil && !self.allowsNullArgument) {
 		return;
 	}
+    
+    if (self.debug) {
+        NSLog(@"Set value %@ for key path %@ on object %@", value, self.binding, self.object);
+    }
     
     id target = self.object; 
     NSString *targetKeyPath = self.binding;
