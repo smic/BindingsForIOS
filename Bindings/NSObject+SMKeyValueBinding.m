@@ -26,8 +26,8 @@ NSString* const SMDebugBindingOption                = @"SMDebugBindingOption";
 @property (nonatomic, copy) NSString *binding;
 @property (nonatomic, copy) NSString *keyPath;
 @property (nonatomic, copy) NSDictionary *options;
-@property (nonatomic, weak) id controller;
-@property (nonatomic, weak) id object;
+@property (nonatomic, unsafe_unretained) id controller; // IMPORTANT: don't use weak, otherwise unbind in dealloc doesn't work
+@property (nonatomic, unsafe_unretained) id object; // IMPORTANT: don't use weak, otherwise unbind in dealloc doesn't work
 @property (nonatomic, strong) NSValueTransformer *valueTransformer;
 @property (nonatomic) BOOL allowsNullArgument;
 @property (nonatomic, strong) id placeholder;
@@ -188,6 +188,9 @@ static char SMKeyValueBindingContext;
 }
 
 - (void)invalidate {
+    if (!self.object && !self.controller) {
+        return;
+    }
 	if (self.bidirectional) {
         [self.object removeObserver:self forKeyPath:self.binding];
     }
@@ -264,7 +267,7 @@ static char InfosKey;
 	
 	NSAssert1([self infoForBinding:binding] == nil, @"An binding %@ exists already", binding);
 	
-	SMKeyValueBindingInfo *info = [[SMKeyValueBindingInfo alloc] initWithBinding:binding 
+	SMKeyValueBindingInfo *info = [[SMKeyValueBindingInfo alloc] initWithBinding:binding
 																		controller:controller 
 																			object:self 
 																	   withKeyPath:keyPath
@@ -275,10 +278,14 @@ static char InfosKey;
 - (void)unbind:(NSString *)binding {
 
 	NSParameterAssert(binding);
+    
+    SMKeyValueBindingInfo *info = [self infoForBinding:binding];
 	
-	NSAssert1([self infoForBinding:binding] != nil, @"No binding %@ exists", binding);
+	NSAssert1(info, @"No binding %@ exists", binding);
 	
     [self setInfo:nil forBinding:binding];
+    
+    [info invalidate];
 }
 
 @end
